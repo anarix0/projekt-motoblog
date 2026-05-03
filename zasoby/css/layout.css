@@ -68,14 +68,6 @@
   display: block;
 }
 
-@media (min-width: 768px) {
-  .rzad {
-    display: grid;
-    grid-template-columns: 300px 1fr;
-    gap: 20px;
-  }
-}
-
 .wpisy {
   display: grid;
   gap: 20px;
