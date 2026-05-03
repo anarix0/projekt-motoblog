@@ -248,7 +248,7 @@ body:has(.menu-przelacznik:checked) {
   height: 100vh;
 }
 
-.menu-przelacznik:checked + .menu-mobilne {
+.menu-przelacznik:checked ~ .menu-mobilne {
   pointer-events: auto;
   top: var(--naglowek-wysokosc);
 }
