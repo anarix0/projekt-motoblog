@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- tagi meta, ikony i tytul dla przeglądarek -->
+    <meta name="title" content="Hybryda plug-in w zimie - Pod maską" />
+    <meta name="description" content="Wiadomości, testy i porady motoryzacyjne." />
+    <meta property="og:image" content="/zasoby/ikony/favicon-96x96.png" />
+
+    <link rel="icon" type="image/png" href="/zasoby/ikony/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/zasoby/ikony/favicon.svg" />
+    <link rel="shortcut icon" href="/zasoby/ikony/favicon.ico" />
+
+    <title>Hybryda plug-in w zimie - Pod maską</title>
+
+    <!-- style -->
+    <style>
+      .blokada {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        inset: 0;
+        justify-content: center;
+        align-items: center;
+        background: #0c1222;
+        color: #fff;
+        font-family: Tahoma, sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        z-index: 1010;
+      }
+    </style>
+
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+    <link rel='preload' as='style' href='https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@600;700;800&display=swap'>
+
+    <link rel="stylesheet" href="/zasoby/css/styl.css" />
+  </head>
+  <body>
+    <!-- nagłówek i nawigacja -->
+
+    <section class="blokada">
+      <p>Ładowanie zawartości...</p>
+    </section>
+
+    <a class="pomin-link" href="#tresc">Przejdź do treści</a>
+        <input type="checkbox" id="menu-przycisk" class="menu-przelacznik" />
+
+    <header id="naglowek-strony">
+      <div class="naglowek-wew">
+        <a class="logo" href="/">
+          <img
+            src="/zasoby/ikony/favicon.svg"
+            alt="Pod maską Logo"
+            class="logo-ikona"
+          />
+          Pod maską
+        </a>
+        <label
+          for="menu-przycisk"
+          class="menu-przycisk"
+          aria-label="Otwórz lub zamknij menu nawigacji"
+        >
+          <svg
+            width="22"
+            height="22"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <nav class="menu" aria-label="Główna nawigacja">
+          <ul class="menu-lista">
+            <li class="menu-element">
+              <a href="/" class="menu-link">Start</a>
+            </li>
+            <li class="menu-element menu-element-z-podmenu">
+              <a href="#" class="menu-link">Blog <i class="fa-solid fa-chevron-down"></i></a>
+              <ul class="menu-podlista">
+                <li>
+                  <a
+                    href="/blog/hybryda-plug-in-w-zimie"
+                    class="menu-link"
+                    aria-current="page"
+                    >Hybryda plug-in w zimie</a>
+                </li>
+                <li>
+                  <a href="/blog/przewyzszenia-a-hamulce" class="menu-link"
+                    >Przewyższenia a hamulce</a>
+                </li>
+                <li class="menu-element">
+                  <a href="/blog/poradnik" class="menu-link">Poradnik</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-element">
+              <a href="/galeria" class="menu-link">Galeria</a>
+            </li>
+            <li class="menu-element">
+              <a href="/o-nas" class="menu-link">O nas</a>
+            </li>
+            <li class="menu-element">
+              <a href="/kontakt" class="menu-link">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="menu menu-mobilne" id="nav-mobile" aria-label="Menu mobilne">
+      <label for="menu-przycisk" class="menu-przeslona"
+        ><span class="tylko-dla-czytnika">Zamknij menu</span></label>
+      <div class="menu-mobilne-panel">
+        <ul class="menu-lista">
+          <li class="menu-element">
+            <a href="/" class="menu-link">Start</a>
+          </li>
+          <li class="menu-element">
+            <details class="menu-szczegoly">
+              <summary class="menu-podsumowanie">Blog</summary>
+              <ul class="menu-podlista">
+                <li>
+                  <a
+                    href="/blog/hybryda-plug-in-w-zimie"
+                    class="menu-link"
+                    aria-current="page"
+                    >Hybryda plug-in w zimie</a>
+                </li>
+                <li>
+                  <a href="/blog/przewyzszenia-a-hamulce" class="menu-link"
+                    >Przewyższenia a hamulce</a>
+                </li>
+                <li class="menu-element">
+                  <a href="/blog/poradnik" class="menu-link"
+                    >Poradnik</a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="menu-element">
+            <a href="/galeria" class="menu-link">Galeria</a>
+          </li>
+          <li class="menu-element">
+            <a href="/o-nas" class="menu-link">O nas</a>
+          </li>
+          <li class="menu-element">
+            <a href="/kontakt" class="menu-link">Kontakt</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- koniec nagłówka-->
+
+    <main id="tresc">
+      <div class="kontener">
+        <nav class="okruszki" aria-label="Ścieżka nawigacji">
+          <ol class="okruszki-lista">
+            <li>
+              <a href="/">Strona główna</a>
+            </li>
+            <li>
+              <a href="/blog">Wszystkie wpisy</a>
+            </li>
+            <li aria-current="page">Hybryda plug-in w zimie</li>
+          </ol>
+        </nav>
+      </div>
+
+      <article class="sekcja-ciasna">
+        <div class="kontener artykul-uklad">
+          <div>
+            <header class="artykul-naglowek">
+              <p class="artykul-info">
+                <span class="etykieta">Test</span> · 12 min czytania · 28 marca
+                2026
+              </p>
+              <h1>
+                Hybryda plug-in w zimie - co sprawdzić przed zimą
+              </h1>
+              <p class="wprowadzenie">
+                Praktyczny przegląd: akumulator, ogrzewanie kabiny i zużycie
+                paliwa w długiej trasie.
+              </p>
+            </header>
+
+            <nav class="spis-tresci spis-tresci-mobilny">
+              <h3>Na tej stronie</h3>
+              <ol>
+                <li>
+                  <a href="#sec-wstep">Wstęp</a>
+                </li>
+                <li>
+                  <a href="#sec-bateria">Bateria i ładowanie</a>
+                </li>
+                <li>
+                  <a href="#sec-kabina">Kabina i szyby</a>
+                </li>
+                <li>
+                  <a href="#sec-podsumowanie">Podsumowanie</a>
+                </li>
+              </ol>
+            </nav>
+
+            <div class="artykul-tresc">
+              <p id="sec-wstep">
+                W pług-inach hybrydowych zima oznacza krótszy zasięg elektryczny
+                i częstsze „wspomaganie” przez silnik spalinowy. To normalne -
+                ważne jest, by nie zaskakiwały Cię nagłe spadki zasięgu ani
+                długie ładowanie w chłodzie.
+              </p>
+
+              <h2 id="sec-bateria">Bateria i ładowanie</h2>
+              <p>
+                Baterie litowe tracą część energii przy niskich temperaturach.
+                Jeśli masz możliwość ładowania w garażu lub przed wyjazdem,
+                wykorzystaj ten fakt przed ładowaniem(baterie podczas ładowania
+                sie ogrzewają). Unikaj długiego ładowania na szybkiej stacji
+                przy bardzo niskich temperaturach, jeśli nie jest to konieczne -
+                bateria może być ogrzewana wolniej.
+              </p>
+
+              <h2 id="sec-kabina">Kabina i szyby</h2>
+              <p>
+                Ogrzewanie postojowe i podgrzewanie siedzeń (jeśli dostępne)
+                zwiekszają zużycie energii w pełnym trybie EV. W trasie warto
+                włączyć tryb hybrydowy zamiast wymuszać EV na każdym odcinku by
+                nie było przeciażenia.
+              </p>
+
+              <h2 id="sec-podsumowanie">Podsumowanie</h2>
+              <p>
+                Planuj ładowanie, pilnuj stan opon zimowych i nie traktuj spadku
+                zasięgu EV jako awarii - jest to efekt fizyki akumulatorów przy
+                niskich temperaturach. Po zimie, przy cieplejszej pogodzie,
+                profil zasięgu wróci do znanych wartości.
+              </p>
+            </div>
+          </div>
+
+          <aside class="artykul-boczny" aria-label="Spis treści">
+            <nav class="spis-tresci">
+              <h3>Na tej stronie</h3>
+              <ol>
+                <li>
+                  <a href="#sec-wstep">Wstęp</a>
+                </li>
+                <li>
+                  <a href="#sec-bateria">Bateria i ładowanie</a>
+                </li>
+                <li>
+                  <a href="#sec-kabina">Kabina i szyby</a>
+                </li>
+                <li>
+                  <a href="#sec-podsumowanie">Podsumowanie</a>
+                </li>
+              </ol>
+            </nav>
+            <div class="wyroznienie">
+              <p>
+                <strong>Wskazówka:</strong> zimą ładuj auto chwilę przed
+                wyjazdem i planuj postoje tak, by akumulator nie był długo
+                wychłodzony.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </article>
+    </main>
+
+    <!-- stopka i powrót do góry -->
+     <footer class="stopka-strony">
+      <div class="kontener stopka-siatka">
+        <div>
+          <h3 class="stopka-tytul-glowny">Pod maską</h3>
+          <p class="stopka-opis">&copy; 2026 Pod maską.</p>
+        </div>
+        <div>
+          <h4 class="stopka-tytul">Sekcje</h4>
+          <ul class="stopka-lista">
+            <li><a href="/blog">Wszystkie wpisy</a></li>
+            <li><a href="/galeria">Galeria</a></li>
+            <li><a href="/blog/poradnik">Poradnik</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="stopka-tytul">Kontakt</h4>
+          <ul class="stopka-lista">
+            <li><a href="/kontakt">Formularz</a></li>
+            <li><a href="/o-nas">O nas</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#" class="do-gory" aria-label="Wróć do góry strony">
+      <i class="fa-solid fa-chevron-up"></i>
+    </a>
+    <!-- koniec stopki -->
+  </body>
+</html>
+
+<script src="https://kit.fontawesome.com/8920756164.js" crossorigin="anonymous"></script>

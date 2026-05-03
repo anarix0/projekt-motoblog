@@ -1,0 +1,54 @@
+name: Deploy Minified
+
+on:
+  push:
+    branches: [ master ]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install tools
+        run: |
+          npm install -g html-minifier-terser clean-css-cli terser
+
+      - name: Minify HTML
+        run: |
+          find . -name "*.html" -type f -print0 \
+            | xargs -0 -I {} sh -c 'html-minifier-terser \
+                --collapse-whitespace \
+                --remove-comments \
+                --remove-optional-tags \
+                --minify-css true \
+                --minify-js true \
+                {} -o {}'
+
+      - name: Minify CSS
+        run: |
+          find . -name "*.css" -type f -print0 \
+            | xargs -0 -I {} sh -c 'cleancss -O2 --source-map -o {} {}'
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./
+
+      - name: Push to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: .

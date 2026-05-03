@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@600;700;800&display=swap");
+
+/* ten plik jest po to, abym nie musial dla kazdego pliku robic kolejny <link> */
+
+@import "./zmienne.css";
+@import "./podstawa.css";
+@import "./layout.css";
+@import "./nawigacja.css";
+@import "./strony.css";
+@import "./komponenty.css";
